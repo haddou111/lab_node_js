@@ -1,12 +1,9 @@
 // server.js
-import http from 'node:http';
-import url from 'node:url';
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-import * as postManager from './postManager.js';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const http = require('http');
+const url = require('url');
+const fs = require('fs');
+const path = require('path');
+const postManager = require('./postManager');
 
 const PORT = process.env.PORT || 3000;
 

@@ -1,9 +1,7 @@
 // postManager.js
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+const fs = require('fs');
+const path = require('path');
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const POSTS_FILE = path.join(__dirname, 'posts.json');
 
 // Lire le fichier des posts
@@ -117,7 +115,7 @@ function deletePost(id, callback) {
 }
 
 // Exporter les fonctions
-export {
+module.exports = {
     getAllPosts,
     getPost,
     insertPost,
